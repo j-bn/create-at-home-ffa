@@ -1,5 +1,15 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
 html, body {
     height: 100%;
+}
+
+.muted {
+    opacity: 0.7;
 }
 
 body {
@@ -10,6 +20,9 @@ body {
 
     background-image: url('img/temple.jpg');
     background-size: cover;
+    background-position: center;
+
+    padding: 5rem;
 
     display: flex;
     flex-direction: column;
@@ -22,10 +35,80 @@ a {
     color: inherit;
 }
 
-h1, h2, h3, h4, h5, h6, p, div {
+body > div {
     background-color: #eee;
     padding: 1rem;
+    margin: 1rem 0;
+
+    box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.3);
+
+    /* text-shadow: 0 0.1em 0 rgba(0,0,0,0.5); */
 }
+
+div#signup {
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+
+    max-width: 25rem;
+}
+
+div#signup h3 {
+    padding: 0;
+    margin: 0;
+}
+
+div#signup small {
+    word-wrap: normal;
+    flex-basis: 0;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+
+    margin-top: 1rem;
+}
+
+input {
+    color: inherit;
+    background-color: inherit;
+
+    border: none;
+    outline: none;
+    
+    padding: 0.4rem 1rem;
+    /* margin: 0 0.5rem; */
+}
+
+input[type="email"] {
+    flex-grow: 1;
+    color: #444;
+    background-color: #ddd;
+
+    border-top-left-radius: 0.4rem;
+    border-bottom-left-radius: 0.4rem;
+}
+
+input[type="Submit"] {
+    text-transform: uppercase;
+    cursor: pointer;
+    border: solid 3px white;
+    transition: all 0.3s ease;
+
+    border-top-right-radius: 0.4rem;
+    border-bottom-right-radius: 0.4rem;
+}
+
+input[type="Submit"]:hover {
+    background-color: white;
+    color: #444;
+}
+
+/* input::placeholder {
+    color: inherit;
+} */
 
 .invert {
     background-color: #444;
