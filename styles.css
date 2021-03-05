@@ -24,6 +24,7 @@
 }
 
 html, body {
+	/* Enabling this gives full-height cover on short pages like welcome.html but interferes with top scrolling */
 	/* height: 100%; */
 }
 
