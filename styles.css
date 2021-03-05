@@ -247,10 +247,13 @@ input[type="Submit"]:hover {
 
 /* Media Queries */
 
-/* @media screen and (max-width: 400px) {
-	body {
-		border: solid 5px red;
-		padding: 1rem;
-		font-size: 1.5rem;
+@media screen and (max-width: 450px) {
+	h1 {
+		font-size: 2rem;
 	}
-} */
+
+	body {
+		padding: 1rem;
+		font-size: 1.1rem;
+	}
+}
