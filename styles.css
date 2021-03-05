@@ -1,124 +1,241 @@
+@font-face {
+	font-family: "FontAwesome";
+	font-weight: normal;
+	font-style: normal;
+	src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?v=4.7.0");
+	src: url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0")
+		format("embedded-opentype"),
+	url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff2?v=4.7.0")
+		format("woff2"),
+	url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.woff?v=4.7.0")
+		format("woff"),
+	url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.ttf?v=4.7.0")
+		format("truetype"),
+	url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular")
+		format("svg");
+}
+
+/* Reset */
+
 * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
 }
 
-html, body {
-    height: 100%;
+html,
+body {
+	height: 100%;
 }
 
+/* Utility Classes */
+
+small,
 .muted {
-    opacity: 0.7;
+	display: block;
+	opacity: 0.7;
 }
+
+/* General Styles */
 
 body {
-    background: #888;
-    color: #444;
-    text-align: center;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background: #888;
+	color: #444;
+	text-align: center;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
-    background-image: url('img/temple.jpg');
-    background-size: cover;
-    background-position: center;
+	background-image: url("img/temple.jpg");
+	background-size: cover;
+	background-position: center;
 
-    padding: 5rem;
+	padding: 5rem;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 a {
-    text-decoration: underline;
-    color: inherit;
+	text-decoration: underline;
+	color: inherit;
+}
+
+p {
+	margin-top: 1rem;
 }
 
 body > div {
-    background-color: #eee;
-    padding: 1rem;
-    margin: 1rem 0;
+	background-color: #eee;
+	padding: 1rem;
+	margin: 1rem 0;
 
-    box-shadow: 0 0.2rem 1rem rgba(0,0,0,0.3);
+	box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
 
-    /* text-shadow: 0 0.1em 0 rgba(0,0,0,0.5); */
+	/* text-shadow: 0 0.1em 0 rgba(0,0,0,0.5); */
 }
 
+body > div.flush {
+	padding: 0;
+}
+
+body > div.invert {
+	background-color: #333;
+	color: #ddd;
+}
+
+/* Signup Box */
+
 div#signup {
-    text-align: left;
+	text-align: left;
 
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 
-    max-width: 25rem;
+	max-width: 25rem;
 }
 
 div#signup h3 {
-    padding: 0;
-    margin: 0;
+	padding: 0;
+	margin: 0;
 }
 
 div#signup small {
-    word-wrap: normal;
-    flex-basis: 0;
+	word-wrap: normal;
+	flex-basis: 0;
 }
+
+/* Signup Form */
 
 form {
-    display: flex;
-    flex-direction: row;
+	display: flex;
+	flex-direction: row;
 
-    margin-top: 1rem;
+	margin-top: 1rem;
 }
 
-input {
-    color: inherit;
-    background-color: inherit;
+input,
+.button {
+	color: inherit;
+	background-color: inherit;
+	text-decoration: none;
 
-    border: none;
-    outline: none;
-    
-    padding: 0.4rem 1rem;
-    /* margin: 0 0.5rem; */
+	border: none;
+	outline: none;
+
+	padding: 0.4rem 1rem;
+	/* margin: 0 0.5rem; */
 }
 
 input[type="email"] {
-    flex-grow: 1;
-    color: #444;
-    background-color: #ddd;
+	flex-grow: 1;
+	color: #444;
+	background-color: #ccc;
 
-    border-top-left-radius: 0.4rem;
-    border-bottom-left-radius: 0.4rem;
+	margin-right: 1rem;
+
+	transition: all 0.3s ease;
 }
 
+input[type="email"]:focus {
+	background-color: #fff;
+}
+
+.button,
 input[type="Submit"] {
-    text-transform: uppercase;
-    cursor: pointer;
-    border: solid 3px white;
-    transition: all 0.3s ease;
-
-    border-top-right-radius: 0.4rem;
-    border-bottom-right-radius: 0.4rem;
+	text-transform: uppercase;
+	cursor: pointer;
+	border: solid 3px white;
+	transition: all 0.3s ease;
 }
 
+.button:hover,
 input[type="Submit"]:hover {
-    background-color: white;
-    color: #444;
+	background-color: white;
+	color: #444;
 }
 
-/* input::placeholder {
-    color: inherit;
-} */
+/* Pseudo-element Backgrounds */
 
-.invert {
-    background-color: #444;
-    color: #eee;
+#steps > div::before,
+#prizes > div::before {
+	display: block;
+	position: absolute;
+
+	top: -0.3rem;
+	left: 0.3rem;
+
+	color: black;
+	opacity: 0.1;
+	font-weight: bold;
+	font-size: 400%;
 }
+
+/* Prizes Section */
+
+#prizes {
+	text-align: left;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#prizes > div {
+	padding: 1rem;
+
+	/* Reference for positioning */
+	position: relative;
+	z-index: 1;
+}
+
+#prizes > div:nth-child(odd) {
+	background-color: #ddd;
+}
+
+#prizes > div:nth-child(1)::before {
+	/* Trophy Icon */
+	content: "\f091";
+	font-family: FontAwesome;
+}
+
+#prizes > div:nth-child(2)::before {
+	/* Star Icon */
+	content: "\f005";
+	font-family: FontAwesome;
+}
+
+/* Prizes */
 
 #steps {
-    display: flex;
+	text-align: left;
+
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: stretch;
+
+	counter-reset: steps-counter;
 }
 
 #steps > div {
-    flex: 1;
+	display: block;
+	min-width: 600px;
+	min-height: 5rem;
+	padding: 1rem;
+	padding-left: 3rem;
+
+	overflow: hidden;
+
+	/* Reference for positioning */
+	position: relative;
+	z-index: 1;
+
+	counter-increment: steps-counter;
+}
+
+#steps > div:nth-child(even) {
+	background-color: #ddd;
+}
+
+#steps > div::before {
+	content: counter(steps-counter) ". ";
 }

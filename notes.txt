@@ -1,3 +1,22 @@
+Checklist
+---------
+
+DONE:
+- Enforce https
+- Fix step 1 text
+- Post Requirements: follow all, tag all in description and #CreateAtHomeFFA
+- Prizes: choice of print and call
+    1st: 14x11 framed photo + 1 hour call
+    2/3rd: 'commended winners' 5x7 print + 1/2 hour call
+
+TODO:
+
+- T&Cs link
+- Backgrounds?
+- Username shuffle?
+- Responsive media queries
+
+
 https://stackoverflow.com/questions/24348223/send-email-from-static-page-hosted-on-github-pages
 
 Requirements
