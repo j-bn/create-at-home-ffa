@@ -23,9 +23,8 @@
 	margin: 0;
 }
 
-html,
-body {
-	height: 100%;
+html, body {
+	/* height: 100%; */
 }
 
 /* Utility Classes */
@@ -47,6 +46,9 @@ body {
 	background-image: url("img/temple.jpg");
 	background-size: cover;
 	background-position: center;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: rgb(0, 68, 53);
 
 	padding: 5rem;
 
@@ -69,6 +71,8 @@ body > div {
 	background-color: #eee;
 	padding: 1rem;
 	margin: 1rem 0;
+
+	max-width: 900px;
 
 	box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.3);
 
@@ -124,7 +128,6 @@ input,
 	outline: none;
 
 	padding: 0.4rem 1rem;
-	/* margin: 0 0.5rem; */
 }
 
 input[type="email"] {
@@ -176,11 +179,14 @@ input[type="Submit"]:hover {
 #prizes {
 	text-align: left;
 	display: flex;
+	flex-direction: row;
 	flex-wrap: wrap;
 }
 
 #prizes > div {
 	padding: 1rem;
+
+	flex: 1 1 15rem;
 
 	/* Reference for positioning */
 	position: relative;
@@ -201,6 +207,8 @@ input[type="Submit"]:hover {
 	/* Star Icon */
 	content: "\f005";
 	font-family: FontAwesome;
+
+	top: 0.1rem;
 }
 
 /* Prizes */
@@ -210,15 +218,12 @@ input[type="Submit"]:hover {
 
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: stretch;
 
 	counter-reset: steps-counter;
 }
 
 #steps > div {
 	display: block;
-	min-width: 600px;
 	min-height: 5rem;
 	padding: 1rem;
 	padding-left: 3rem;
@@ -239,3 +244,13 @@ input[type="Submit"]:hover {
 #steps > div::before {
 	content: counter(steps-counter) ". ";
 }
+
+/* Media Queries */
+
+/* @media screen and (max-width: 400px) {
+	body {
+		border: solid 5px red;
+		padding: 1rem;
+		font-size: 1.5rem;
+	}
+} */
